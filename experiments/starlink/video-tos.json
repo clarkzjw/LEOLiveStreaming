@@ -7,7 +7,7 @@
         "TARGET_LATENCY": 2,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrCMAB",
         "CATCH_UP": "liveCatchupModeCMAB"
     },
@@ -19,7 +19,7 @@
         "TARGET_LATENCY": 3,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrCMAB",
         "CATCH_UP": "liveCatchupModeCMAB"
     },
@@ -31,7 +31,7 @@
         "TARGET_LATENCY": 4,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrCMAB",
         "CATCH_UP": "liveCatchupModeCMAB"
     },
@@ -43,7 +43,7 @@
         "TARGET_LATENCY": 5,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrCMAB",
         "CATCH_UP": "liveCatchupModeCMAB"
     },
@@ -55,7 +55,7 @@
         "TARGET_LATENCY": 6,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrCMAB",
         "CATCH_UP": "liveCatchupModeCMAB"
     },
@@ -67,7 +67,7 @@
         "TARGET_LATENCY": 2,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrLoLP"
     },
     {
@@ -78,7 +78,7 @@
         "TARGET_LATENCY": 3,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrLoLP"
     },
     {
@@ -89,7 +89,7 @@
         "TARGET_LATENCY": 4,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrLoLP"
     },
     {
@@ -100,7 +100,7 @@
         "TARGET_LATENCY": 5,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrLoLP"
     },
     {
@@ -111,7 +111,7 @@
         "TARGET_LATENCY": 6,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrLoLP"
     },
     {
@@ -122,7 +122,7 @@
         "TARGET_LATENCY": 2,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrDynamic"
     },
     {
@@ -133,7 +133,7 @@
         "TARGET_LATENCY": 3,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrDynamic"
     },
     {
@@ -144,7 +144,7 @@
         "TARGET_LATENCY": 4,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrDynamic"
     },
     {
@@ -155,7 +155,7 @@
         "TARGET_LATENCY": 5,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrDynamic"
     },
     {
@@ -166,7 +166,7 @@
         "TARGET_LATENCY": 6,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrDynamic"
     },
     {
@@ -177,7 +177,7 @@
         "TARGET_LATENCY": 2,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrL2A"
     },
     {
@@ -188,7 +188,7 @@
         "TARGET_LATENCY": 3,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrL2A"
     },
     {
@@ -199,7 +199,7 @@
         "TARGET_LATENCY": 4,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrL2A"
     },
     {
@@ -210,7 +210,7 @@
         "TARGET_LATENCY": 5,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrL2A"
     },
     {
@@ -221,7 +221,7 @@
         "TARGET_LATENCY": 6,
         "CONSTANT_VIDEO_BITRATE": -1,
         "TOTAL_ROUNDS": 5,
-        "MPD_URL": "http://<ip:port>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
+        "MPD_URL": "http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd",
         "ABR_ALGORITHM": "abrL2A"
     }
 ]

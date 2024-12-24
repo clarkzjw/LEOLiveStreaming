@@ -123,7 +123,7 @@ oneweb_iowa
 
 **`ROUND_DURATION`**
 
-If you are using the default latency traces as shwon above, the maximal `ROUND_DURATION` can be set will be `600`.
+If you are using the default latency traces as shwon above, the maximal `ROUND_DURATION` can be set is `600` as each latency profile lasts around 10 minutes.
 
 **`VIDEO_PROFILE`**
 
@@ -193,6 +193,65 @@ make
 
 ## Real world experiments
 
+To reuse our code for conducting video streaming over real networks, please follow the following steps.
+
+### Media Server
+
+If you are evaluating live video streaming over Starlink, it is recommended to set up the media server at the cloud server provider that is closest to your Starlink Point-of-Presence (PoP). Typically, either Akamai Linode or Google Cloud Platform would be a good choice.
+
+You can verify the latency and network path from your Starlink installation to the media server by using `traceroute` or `mtr`, e.g.,
+
+```
+HOST:                                                                                                              Loss%   Snt   Last   Avg  Best  Wrst StDev
+  1.|-- customer.sttlwax1.pop.starlinkisp.net (2605:59c8:xxxx)                                                      0.0%    10    0.3   0.4   0.2   0.8   0.2
+  2.|-- customer.sttlwax1.pop.starlinkisp.net (2605:59c8:xxxx)                                                      0.0%    10   29.6  32.0  21.6  60.6  14.1
+  3.|-- host.starlinkisp.net (2620:134:b0fe:252::40)                                                                0.0%    10   22.2  32.7  21.7  56.4  10.5
+  4.|-- host.starlinkisp.net (2620:134:b0ff::30a)                                                                   0.0%    10   22.8  27.6  20.1  38.5   7.2
+  5.|-- host.starlinkisp.net (2620:134:b0ff::3e5)                                                                   0.0%    10   27.7  29.1  18.5  46.7   8.6
+  6.|-- undefined.hostname.localhost (2605:59c7:9001::13)                                                           0.0%    10   28.3  35.9  18.1  59.6  11.3
+  7.|-- g2600-1488-a000-0220-0000-0000-0000-000b.deploy.static.akamaitechnologies.com (2600:1488:a000:220::b)       0.0%    10   29.2  36.3  19.7  63.1  14.3
+  8.|-- g2600-1409-a800-0300-fffe-0000-0000-0001.deploy.static.akamaitechnologies.com (2600:1409:a800:300:fffe::1)  0.0%    10   21.6  31.5  21.6  39.5   6.8
+  9.|-- lo1.r01b.tor107.sea01.fab.netarch.akamai.com (2600:1409:a800:8600:ffff::)                                   0.0%    10   22.2  33.8  22.2  43.9   6.9
+ 10.|-- vlan202.r04.leaf107.sea01.fab.netarch.akamai.com (2600:1409:a800:7c02::)                                    0.0%    10   22.9  32.5  21.1  62.9  12.0
+ 11.|-- vlan228.r18.spine101.sea01.fab.netarch.akamai.com (2600:1409:a800:171c::)                                   0.0%    10   19.6  30.1  19.6  41.9   7.4
+ 12.|-- vlan118.r04.leaf106.sea01.fab.netarch.akamai.com (2600:1409:a800:1718::1)                                   0.0%    10   28.1  36.0  20.4  60.3  12.9
+ 13.|-- vlan104.r16b.tor106.sea01.fab.netarch.akamai.com (2600:1409:a800:7820::1)                                   0.0%    10   24.7  28.3  21.5  45.0   7.1
+ 14.|-- 2600:3c0f:20:6:27::496                                                                                      0.0%    10   21.5  28.2  19.9  42.5   6.8
+ 15.|-- 2600:3c0f:20:8::92                                                                                          0.0%    10   18.2  33.5  18.2  43.6   7.2
+ 16.|-- REDACTED                                                                                                    0.0%    10   23.0  31.4  21.3  50.3   9.2
+```
+
+In this example, the media server is created in Akamai Linode's `us-sea` availability zone in Seattle, and the client is connected to a Starlink dish associated with the Starlink Seattle PoP (`sttlwax1`).
+
+Hop 2 is where the network packets reached the landing ground station gateway across the satellite link, and after Hop 6, the traffic exits Starlink backbone network and entered Akamai.
+
+### Media VM Setup
+
+1. Apply File Watch Limit adjustment
+
+```bash
+echo fs.inotify.max_user_watches= 131070 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+
+2. For real world experiments, deploy live video streaming media server on the VM by
+
+```bash
+sudo docker compose -f docker-compose-server.yaml pull
+sudo docker compose -f docker-compose-server.yaml up -d
+```
+
+3. The MPD file will be available at
+
+```
+http://<ip-or-domain-of-the-media-server>/livesim2/tos/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd
+http://<ip-or-domain-of-the-media-server>/livesim2/croatia/WAVE/vectors/switching_sets/12.5_25_50/ss1/2023-10-05/stream.mpd
+```
+
+By default, host port 80 on the media VM will be used for the Nginx container to serve MPD files.
+
+4. Update experiment profiles in [experiments/starlink](./experiments/starlink/) with the new MPD_URL by replacing <ip-or-domain-of-the-media-server>, and specify the experiment profile to be used in `docker-compose-client.yaml` under the `runner` service.
+
+5. The subsequent steps are similar to network emulation, but you need to replace `docker-compose-emulation.yaml` with `docker-compose-client.yaml` in the command.
 
 ## Extensions
 
