@@ -1,16 +1,12 @@
 .DS_Store
 .stfolder/
 .idea/
-figures/
 .tar.zst
 .venv/
 whl/
 *.whl
 __pycache__/
 .env
-*.png
-!assets/*.png
-!figure*.png
 # Local .terraform directories
 **/.terraform/*
 
