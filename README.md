@@ -7,6 +7,7 @@ Table of Contents
 
   * [Repository structure](#repository-structure)
   * [Prerequisites](#prerequisites)
+  * [Paper figures](#paper-figures)
   * [Emulation](#emulation)
   * [Real world experiments](#real-world-experiments)
   * [Extensions](#extensions)
