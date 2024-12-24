@@ -28,7 +28,7 @@ plt.rcParams['ps.fonttype'] = 42
 plt.rcParams.update({'font.size': fontsize})
 plt.rcParams.update({'axes.labelsize': fontsize})
 
-DATA_DIR = "../figures/emulation"
+DATA_DIR = "../figures"
 
 L2A = "abrL2A"
 Dynamic = "abrDynamic"

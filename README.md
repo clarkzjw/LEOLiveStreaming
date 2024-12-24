@@ -200,7 +200,7 @@ where the expected execuation time for the entire experiment set will be printed
 2024-12-24 08:54:46.489 INFO batch_runner - <module>: Video Streaming completed.
 ```
 
-The raw data will be available in the `figures-emulation` folder.
+The raw data will be available in the `figures` folder.
 
 7. Plot all the figures similar to Figure 8 to Figure 10 by
 
