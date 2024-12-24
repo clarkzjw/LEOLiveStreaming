@@ -202,17 +202,17 @@ where the expected execuation time for the entire experiment set will be printed
 
 The raw data will be available in the `figures-emulation` folder.
 
-7. After finishing the emulation, you can cleanup the resources by
-
-```bash
-sudo docker compose -f docker-compose-emulation.yaml down
-```
-
-8. Plot all the figures similar to Figure 8 to Figure 10 by
+7. Plot all the figures similar to Figure 8 to Figure 10 by
 
 ```bash
 cd plot
 make
+```
+
+8. After finishing the emulation, you can cleanup the resources by
+
+```bash
+sudo docker compose -f docker-compose-emulation.yaml down
 ```
 
 ## Real world experiments
