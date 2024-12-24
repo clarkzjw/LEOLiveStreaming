@@ -1,6 +1,6 @@
 services:
   dashjs:
-    image: clarkzjw/dashjs:tomm24
+    image: clarkzjw/dashjs:tomm24-submission
     build:
       context: .
       dockerfile: Dockerfile-dashjs
@@ -26,7 +26,7 @@ services:
         ipv4_address: 192.167.0.102
 
   runner:
-    image: clarkzjw/dashjs-runner:tomm24
+    image: clarkzjw/dashjs-runner:tomm24-submission
     container_name: dashjs-runner
     build:
       context: .
@@ -50,7 +50,7 @@ services:
         ipv4_address: 192.167.0.103
 
   stat-server:
-    image: clarkzjw/dashjs-stats-server:tomm24
+    image: clarkzjw/dashjs-stats-server:tomm24-submission
     build:
       context: ./stats-server
       dockerfile: Dockerfile
@@ -96,7 +96,7 @@ services:
 
   # placeholder for easier image building with docker compose
   nginx-placeholder:
-    image: clarkzjw/dashjs-nginx-emulation:tomm24
+    image: clarkzjw/dashjs-nginx-emulation:tomm24-submission
     build:
       context: .
       dockerfile: Dockerfile-nginx-emulation
@@ -106,7 +106,7 @@ services:
       - "while true; do sleep 1000; done"
 
   livesim2:
-    image: clarkzjw/dashjs-livesim2:tomm24
+    image: clarkzjw/dashjs-livesim2:tomm24-submission
     build:
       context: .
       dockerfile: Dockerfile-livesim2
@@ -118,7 +118,7 @@ services:
         ipv4_address: 192.167.0.108
 
   pyodide:
-    image: clarkzjw/dashjs-pyodide:tomm24
+    image: clarkzjw/dashjs-pyodide:tomm24-submission
     build:
       context: ./webassembly
       dockerfile: Dockerfile

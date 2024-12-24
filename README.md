@@ -185,7 +185,11 @@ where the expected execuation time for the entire experiment set will be printed
 
 ```bash
 [...]
-2024-03-06 09:18:46.937 INFO batch_runner - <module>: Total experiment count: 160, duration: 48000 seconds (13.333333333333334 hours)
+2024-12-24 04:49:57.354 INFO batch_runner - <module>: Total experiment count: 80, duration: 48000 seconds (13.333333333333334 hours)
+2024-12-24 04:49:57.354 INFO batch_runner - <module>: running tos-bent_pipe_victoria_1-abrCMAB-1223-2049-target-latency-3s-duration-600-bitrate-variable-0, (1/80)
+2024-12-24 04:49:57.354 INFO video - create_nginx_with_trace: creating nginx with trace profile bent_pipe_victoria_1
+2024-12-24 04:49:57.785 INFO single_runner - run_once: running tos-bent_pipe_victoria_1-abrCMAB-1223-2049-target-latency-3s-duration-600-bitrate-variable-0
+2024-12-24 04:49:57.785 INFO single_runner - run_once: wait 10 seconds before connecting to remote chrome
 [...]
 ```
 
@@ -193,7 +197,7 @@ where the expected execuation time for the entire experiment set will be printed
 
 ```bash
 [...]
-2024-03-06 08:54:46.489 INFO batch_runner - <module>: Video Streaming completed.
+2024-12-24 08:54:46.489 INFO batch_runner - <module>: Video Streaming completed.
 ```
 
 The raw data will be available in the `figures-emulation` folder.

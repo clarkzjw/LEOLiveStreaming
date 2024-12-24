@@ -1,6 +1,6 @@
 services:
   dashjs:
-    image: clarkzjw/dashjs:tomm24
+    image: clarkzjw/dashjs:tomm24-submission
     build:
       context: .
       dockerfile: Dockerfile-dashjs
@@ -9,7 +9,7 @@ services:
     restart: always
 
   nginx:
-    image: clarkzjw/dashjs-nginx:tomm24
+    image: clarkzjw/dashjs-nginx:tomm24-submission
     build:
       context: .
       dockerfile: Dockerfile-nginx
@@ -18,7 +18,7 @@ services:
     restart: always
 
   livesim2:
-    image: clarkzjw/dashjs-livesim2:tomm24
+    image: clarkzjw/dashjs-livesim2:tomm24-submission
     build:
       context: .
       dockerfile: Dockerfile-livesim2
