@@ -34,7 +34,7 @@ services:
     privileged: true
     volumes:
       - ./experiments/emulation/emulation-video-tos-1.json:/batch.json
-      - ./figures:/figures
+      - ./figures-emulation:/figures
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - WORKDIR=${PWD}
