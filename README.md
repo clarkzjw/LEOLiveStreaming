@@ -82,6 +82,8 @@ This repository contains the following components.
 
 You can recreate figures in the paper with corresponding scripts in the [paper-figures](./paper-figures/) directory.
 
+> **Note**: Currently, after the video streaming evaluation ends, some of the plotting scripts still read playback metrics from MongoDB that are not dumped locally. So the raw data for Figure 8 - Figure 10 in the paper are not included in the repository. But we include the plotting scripts in the [plot](./plot/) directory. We plan to update this behavior in the future.
+
 ## Emulation
 
 The topology for our network emulator is shown as follows.
