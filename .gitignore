@@ -10,6 +10,7 @@ __pycache__/
 .env
 *.png
 !assets/*.png
+!figure*.png
 # Local .terraform directories
 **/.terraform/*
 
