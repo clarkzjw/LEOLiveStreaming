@@ -15,7 +15,27 @@ Table of Contents
 ## Repository structure
 
 ```
-
+├── assets                           # figures for README.md
+├── docker-compose-client.yaml       # docker compose file for the streaming client in real world experiments
+├── docker-compose-emulation.yaml    # docker compose file for network emulation evaluation
+├── docker-compose-server.yaml       # docker compose file for the media server in real world experiments
+├── Dockerfile-dashjs                # Dockerfile to build dash.js
+├── Dockerfile-livesim2              # Dockerfile to build livesim2
+├── Dockerfile-nginx                 # Dockerfile to build Nginx in real world experiments
+├── Dockerfile-nginx-emulation       # Dockerfile to build Nginx in network emulation, along with traffic shaper
+├── Dockerfile-runner                # Dockerfile to build experiment scheduler and runner
+├── etc                              # Nginx configuration files
+├── experiments                      # Experiment profiles
+├── LICENSE
+├── paper-figures                    # Scripts to recreate figures in the paper
+├── plot                             # Scripts to create figures after video streaming evaluation
+├── poetry.lock
+├── pyproject.toml
+├── README.md
+├── runner                           # experiment scheduler and runner
+├── shaper                           # trace-driven traffic shaper
+├── stats-server                     # backend server to store playback metrics and network measurement
+└── webassembly                      # Custom Pyodide WebAssembly Python runtime
 ```
 
 ---
@@ -261,16 +281,12 @@ To replace the default bitrate ladder and use custom video datasets, replace and
 
 ```Dockerfile
 # RUN ./dashfetcher -a
-                    # test content from https://cta-wave.github.io/Test-Content/
-                    #    croatia
-                    #    https://dash.akamaized.net/WAVE/vectors/switching_sets/12.5_25_50/ss1/2023-10-05/stream.mpd
+        # test content from https://cta-wave.github.io/Test-Content/
+        #    croatia
+        #    https://dash.akamaized.net/WAVE/vectors/switching_sets/12.5_25_50/ss1/2023-10-05/stream.mpd
 
-                    #    tos
-                    #    https://dash.akamaized.net/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd
-
-                    # datasets at AAU.at dataset are not compatible with livesim2
-                    # https://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/1sec/BigBuckBunny_1s_simple_2014_05_09.mpd
-                    # https://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/2sec/BigBuckBunny_2s_simple_2014_05_09.mpd
+        #    tos
+        #    https://dash.akamaized.net/WAVE/vectors/switching_sets/15_30_60/ss1/2023-10-05/stream.mpd
 
 RUN wget https://starlink-dash-live.jinwei.me/tos.zip && unzip tos.zip && rm tos.zip
 RUN wget https://starlink-dash-live.jinwei.me/croatia.zip && unzip croatia.zip && rm croatia.zip
